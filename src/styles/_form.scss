@@ -1,0 +1,39 @@
+.form-container {
+  grid-area: form;
+  @include flex-column;
+  align-items: center;
+  justify-content: center;
+  background: $c-background;
+  position: relative;
+
+  .error {
+    color: rgb(233, 8, 8);
+    font-weight: 500;
+    position: absolute;
+    top: 0.5rem;
+    left: 4rem;
+  }
+
+  form {
+    @include flex-column;
+    align-items: flex-start;
+  }
+
+  input {
+    height: 3.5rem;
+    width: 16rem;
+    font-family: "Roboto Mono", Courier, monospace;
+  }
+
+  button {
+    margin-top: 1.5rem;
+    background: $c-primary;
+    color: white;
+    padding: 0.7rem 2rem;
+    box-shadow: 0 0 8px 2px #bbb;
+
+    &:hover {
+      background: darken($c-primary, 20%);
+    }
+  }
+}

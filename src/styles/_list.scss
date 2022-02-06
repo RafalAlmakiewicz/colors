@@ -1,0 +1,39 @@
+.list {
+  grid-area: list;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  align-content: start;
+  flex-wrap: wrap;
+  gap: 3rem;
+
+  &-item {
+    background: $c-background;
+    position: relative;
+
+    p {
+      font-family: "Roboto Mono", Courier, monospace;
+      letter-spacing: 2px;
+    }
+
+    .color-square {
+      height: 10rem;
+      width: 10rem;
+      --bg-color: white;
+      background: var(--bg-color);
+    }
+
+    button {
+      background: $c-background;
+      position: absolute;
+      height: $text-size;
+      width: $text-size;
+      top: 0;
+      right: 0;
+
+      &:hover {
+        background: darken($c-background, 20%);
+      }
+    }
+  }
+}

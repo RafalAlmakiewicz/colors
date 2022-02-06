@@ -1,0 +1,19 @@
+.filters {
+  grid-area: filters;
+  @include flex-column;
+  background: $c-background;
+  align-items: flex-end;
+  padding: 2rem;
+
+  input {
+    display: inline-block;
+    margin-left: 1rem;
+    height: $text-size;
+    width: $text-size;
+  }
+
+  h2 {
+    align-self: center;
+    margin-bottom: 1.5rem;
+  }
+}

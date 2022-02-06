@@ -1,0 +1,41 @@
+#root {
+  @include flex-column;
+  row-gap: 3rem;
+}
+
+header {
+  background: $c-primary;
+  color: white;
+  height: 7rem;
+
+  @media (max-width: $medium-screen) {
+    text-align: center;
+  }
+}
+
+main {
+  display: grid;
+  gap: 2rem;
+  grid-template-rows: 20rem;
+  grid-template-columns: 4rem $section-size 1fr 4rem;
+  grid-template-areas:
+    ". form list ."
+    ". filters list .";
+
+  @media (max-width: $medium-screen) {
+    grid-template-rows: $section-size;
+    grid-template-columns: 1fr $section-size $section-size 1fr;
+    grid-template-areas:
+      ". form filters ."
+      ". list list .";
+  }
+
+  @media (max-width: $small-screen) {
+    grid-template-rows: $section-size $section-size;
+    grid-template-columns: 1fr $section-size 1fr;
+    grid-template-areas:
+      ". form ."
+      ". filters ."
+      ". list .";
+  }
+}
