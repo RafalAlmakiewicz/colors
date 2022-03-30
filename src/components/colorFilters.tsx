@@ -1,8 +1,8 @@
-interface Props {
+interface ColorFiltersProps {
   setFilter: (filter: string) => void;
 }
 
-const ColorFilters: React.FC<Props> = ({ setFilter }) => {
+const ColorFilters = ({ setFilter }: ColorFiltersProps) => {
   return (
     <section className="filters">
       <h2>Filters</h2>

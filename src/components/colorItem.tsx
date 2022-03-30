@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 
-interface Props {
+interface ColorItemProps {
   color: string;
   deleteColor: (color: string) => void;
 }
 
-const ColorItem: React.FC<Props> = ({ color, deleteColor }) => {
+const ColorItem = ({ color, deleteColor }: ColorItemProps) => {
   useEffect(() => {
     const colorSquare: HTMLElement | null = document.querySelector(
       `[data-color="${color}"]`

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { formatColor } from "../helpers";
 
-interface Props {
+interface ColorFormProps {
   addColor: (color: string) => void;
   colors: string[];
 }
 
-const ColorForm: React.FC<Props> = ({ addColor, colors }) => {
+const ColorForm = ({ addColor, colors }: ColorFormProps) => {
   const [newColor, setNewColor] = useState("");
   const [error, setError] = useState("");
 

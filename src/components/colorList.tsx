@@ -1,11 +1,11 @@
 import ColorItem from "./colorItem";
 
-interface Props {
+interface ColorListProps {
   colors: string[];
   deleteColor: (color: string) => void;
 }
 
-const ColorList: React.FC<Props> = ({ colors, deleteColor }) => {
+const ColorList = ({ colors, deleteColor }: ColorListProps) => {
   return (
     <section className="list">
       {colors.map((color) => (

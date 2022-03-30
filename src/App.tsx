@@ -15,13 +15,13 @@ import {
 } from "./helpers";
 import defaultColors from "./defaultColors";
 
-interface State {
+interface AppState {
   colors: string[];
   filters: string[];
 }
 
-class App extends React.Component<{}, State> {
-  state: State = {
+class App extends React.Component<{}, AppState> {
+  state: AppState = {
     colors: [],
     filters: [],
   };
